@@ -26,6 +26,7 @@ namespace CarLotSimulator
             honda.EngineNoise = "vrrrrrrrr";
             honda.HonkNoise = "meep meep";
             lot.Cars.Add(honda);
+            
 
             var tesla = new Car() 
             {
@@ -38,12 +39,27 @@ namespace CarLotSimulator
             };
             lot.Cars.Add(tesla);
 
- var mazda = new Car(2019, "Mazda", "Cx 5", "MMMMmmmmmmmerrrrrrrrrrrrrRRRRRRRRRRRRRmrrrrrrrrrrr", "MEEP!! MEEP!!", true);
+            var mazda = new Car(2019, "Mazda", "Cx 5", "MMMMmmmmmmmerrrrrrrrrrrrrRRRRRRRRRRRRRmrrrrrrrrrrr", "MEEP!! MEEP!!", true);
             lot.Cars.Add(mazda);
+            // new cars for the static exercise.
+            var toyota = new Car(2019, "Toyota", "Camery", "mmmmmMMMMMmmmmmerrrrrr", "meep meep", true);
+            lot.Cars.Add(toyota);
+
+            var chevy = new Car(2022, "Chevy", "silverado", "MMMMMMmMMMRRRRRRRRR POP POP", "Train Horn", true);
+            lot.Cars.Add(chevy);
+
+            var sutphen = new Car(2023, "sutphen", "Heavy-Duty custom pumper", "strrrrivvvvvvvv puttt putttt", "weeeewoooooweeeeewoooooweeeeewooo", true);
+            lot.Cars.Add(sutphen);
+
+
+
+
+
 
             foreach (var car in lot.Cars)
             { 
-                Console.WriteLine($"Year: {car.Year}, Make:{car.Make}, Model: {car.Model}"); 
+                Console.WriteLine($"Year: {car.Year}, Make:{car.Make}, Model: {car.Model}  / / Number of cars in lot {CarLot.numberOfCars++}.");
+                
             }
             Console.WriteLine("----------------------------------");
 
